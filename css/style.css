@@ -1,0 +1,73 @@
+
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
+/* Header styles */
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Main styles */
+main {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Section styles */
+.section {
+    flex: 1 0 100%; /* Initially, each section takes full width */
+    margin-bottom: 20px;
+    position: relative;
+    border: 1px solid #000;
+    background-color: #fff;
+}
+
+/* Section title styles */
+.section-title {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #f44336; /* Red background for section title */
+    color: #fff; /* White text */
+    padding: 5px 10px;
+    font-size: 1.25em; /* 25% larger than section content */
+    border: 1px solid #000;
+}
+
+/* Section content styles */
+.section-content {
+    padding: 20px;
+}
+
+/* Media queries for responsiveness */
+@media (min-width: 768px) {
+    /* Tablet view */
+    .section {
+        flex-basis: calc(50% - 20px); /* Two sections per row with margin */
+    }
+
+    /* Adjust third section to full width in tablet view */
+    .section:nth-child(3) {
+        flex-basis: 100%;
+    }
+}
+
+@media (min-width: 992px) {
+    /* Desktop view */
+    .section {
+        flex-basis: calc(33.33% - 20px); /* Three sections per row with margin */
+    }
+}
